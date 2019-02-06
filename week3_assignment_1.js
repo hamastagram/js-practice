@@ -5,7 +5,7 @@ class Library {
   }
 
   addBook(book) {
-    if (!(book instanceof Book)) throw Error("book should be of type Book");
+    if (!(book instanceof Book)) throw Error("book should be of type Book"); //throwing err 
     this.books.push(book);
   }
 
@@ -14,7 +14,7 @@ class Library {
   }
 
   addBookToCart(index) {
-    const [book] = this.books.splice(index, 1);
+    const [book] = this.books.splice(index, 1);// deconstruction
     this.cart.push(book);
   }
 
